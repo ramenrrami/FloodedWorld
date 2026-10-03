@@ -18,6 +18,7 @@ public final class FloodedWorld extends JavaPlugin {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new ChunkLoadListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerSpawnListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerSpawnListener(), this);
     }
 
     @Override
