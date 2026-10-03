@@ -11,12 +11,12 @@ import org.jetbrains.annotations.NotNull;
 
 public class NightVisionManager {
     private FloodedWorld plugin;
+    private NamespacedKey nightVisionKey;
 
     public NightVisionManager(FloodedWorld plugin) {
         this.plugin = plugin;
+        this.nightVisionKey = new NamespacedKey(plugin, "nightvision");
     }
-
-    NamespacedKey nightVisionKey = new NamespacedKey(plugin, "nightvision");
 
     public @NotNull NamespacedKey getNightVisionKey() {
         return nightVisionKey;
@@ -47,8 +47,6 @@ public class NightVisionManager {
     }
 
     public void onRemv(Player player) {
-        if (!this.isNightVision(player)) return;
-
         player.removePotionEffect(PotionEffectType.NIGHT_VISION);
     }
 }
