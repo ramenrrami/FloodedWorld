@@ -14,11 +14,10 @@ public class ChunkLoadListener implements Listener {
 
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                for (int y = e.getChunk().getWorld().getMinHeight(); y < e.getChunk().getWorld().getMaxHeight(); y++) {
+                for (int y = e.getWorld().getMinHeight(); y < e.getWorld().getMaxHeight(); y++) {
                     Block block = e.getChunk().getBlock(x, y, z);
-                    if (block.getType() == Material.AIR && block.getType() == Material.AIR) {
-                        block.setType(Material.WATER);
-                        break;
+                    if (block.getType() == Material.AIR || block.getType() == Material.AIR) {
+                        block.setType(Material.WATER, false);
                     }
                 }
             }
