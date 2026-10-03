@@ -9,7 +9,7 @@ import org.checkerframework.checker.units.qual.N;
 
 public class NVUser {
 
-    private static final NamespacedKey NIGHT_VISION_KEY = new NamespacedKey(FloodedWorld.getInstance(), "floodedworld");
+    private static final NamespacedKey NIGHT_VISION_KEY = new NamespacedKey(FloodedWorld.getInstance(), "nightvision");
 
     private final Player player;
 
