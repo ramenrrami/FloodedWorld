@@ -7,3 +7,7 @@ load: POSTWORLD
 folia-supported: true
 
 authors: [ue_rami]
+
+commands:
+  nightvision:
+    aliases: [nv]
