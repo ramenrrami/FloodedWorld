@@ -40,7 +40,7 @@ public class NightVisionManager {
     }
 
     public void addPot(Player player) {
-        if (!this.isNightVision(player));
+        if (!this.isNightVision(player)) return;
 
         PotionEffect nv = new PotionEffect(PotionEffectType.NIGHT_VISION, 99999999, 0, false, false);
         player.addPotionEffect(nv);
