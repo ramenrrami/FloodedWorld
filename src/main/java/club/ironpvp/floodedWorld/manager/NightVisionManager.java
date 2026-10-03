@@ -5,6 +5,8 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
 
 public class NightVisionManager {
@@ -35,5 +37,18 @@ public class NightVisionManager {
         boolean newState = !isNightVision(player);
         setNightVision(player, newState);
         return newState;
+    }
+
+    public void addPot(Player player) {
+        if (!this.isNightVision(player));
+
+        PotionEffect nv = new PotionEffect(PotionEffectType.NIGHT_VISION, 99999999, 0, false, false);
+        player.addPotionEffect(nv);
+    }
+
+    public void onRemv(Player player) {
+        if (!this.isNightVision(player)) return;
+
+        player.removePotionEffect(PotionEffectType.NIGHT_VISION);
     }
 }

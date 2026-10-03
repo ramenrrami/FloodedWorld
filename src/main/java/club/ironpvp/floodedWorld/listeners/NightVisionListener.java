@@ -17,17 +17,12 @@ public class NightVisionListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if (!manager.isNightVision(e.getPlayer())) return;
-
-        PotionEffect nv = new PotionEffect(PotionEffectType.NIGHT_VISION, 99999999, 0, false, false);
-        e.getPlayer().addPotionEffect(nv);
+        manager.addPot(e.getPlayer());
     }
 
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
-        if (!manager.isNightVision(e.getPlayer())) return;
-
-        e.getPlayer().removePotionEffect(PotionEffectType.NIGHT_VISION);
+        manager.onRemv(e.getPlayer());
     }
 
 }
