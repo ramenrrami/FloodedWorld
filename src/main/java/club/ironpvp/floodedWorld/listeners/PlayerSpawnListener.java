@@ -13,9 +13,9 @@ public class PlayerSpawnListener implements Listener {
     @EventHandler
     public void onSpawn(AsyncPlayerSpawnLocationEvent e) {
         Location loc = e.getSpawnLocation();
-        Block block = loc.getBlock();
 
         for (int y = 60; y < e.getSpawnLocation().getWorld().getMaxHeight(); y++) {
+            Block block = loc.getWorld().getBlockAt(loc.getBlockX(), y, loc.getBlockZ());
             if (block.getType() == Material.WATER) {
                 loc.setY(y);
                 e.setSpawnLocation(loc);
@@ -27,9 +27,9 @@ public class PlayerSpawnListener implements Listener {
     @EventHandler
     public void onRespawn(PlayerRespawnEvent e) {
         Location loc = e.getRespawnLocation();
-        Block block = loc.getBlock();
 
         for (int y = 60; y < e.getRespawnLocation().getWorld().getMaxHeight(); y++) {
+            Block block = loc.getWorld().getBlockAt(loc.getBlockX(), y, loc.getBlockZ());
             if (block.getType() == Material.WATER) {
                 loc.setY(y);
                 e.setRespawnLocation(loc);
