@@ -3,7 +3,7 @@ package club.ironpvp.floodedWorld.listeners;
 import club.ironpvp.floodedWorld.FloodedWorld;
 import club.ironpvp.floodedWorld.manager.NightVisionManager;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
