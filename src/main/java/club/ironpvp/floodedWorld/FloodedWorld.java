@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2026 raammi
+ */
+
 package club.ironpvp.floodedWorld;
 
 import club.ironpvp.floodedWorld.commands.NightVisionCommand;
